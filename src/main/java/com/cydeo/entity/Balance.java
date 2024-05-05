@@ -9,12 +9,13 @@ import java.math.BigDecimal;
 @Entity
 @Data
 @NoArgsConstructor
-public class Balance {
+public class Balance extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
 
+    @Column(precision = 19, scale = 2)
     private BigDecimal amount;
 
     @OneToOne
