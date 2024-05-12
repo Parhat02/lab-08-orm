@@ -24,5 +24,10 @@ public class Product {
     @OneToMany(mappedBy = "product")
     private List<CartItem> cartItem;
 
+    @ManyToMany
+    @JoinTable(name = "product_category_rel", joinColumns = @JoinColumn(name = "p_id"),
+            inverseJoinColumns = @JoinColumn(name = "c_id"))
+    private List<Category> categoryList;
+
 
 }

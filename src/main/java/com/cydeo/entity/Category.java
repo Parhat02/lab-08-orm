@@ -17,8 +17,8 @@ public class Category {
 
     private String name;
 
-    @ManyToMany
-    @JoinTable(name = "product_category_rel", joinColumns = @JoinColumn(name = "c_id"),
-    inverseJoinColumns = @JoinColumn(name = "p_id"))
-    private List<Product> productList;
+//    @ManyToMany
+//    @JoinTable(name = "product_category_rel", joinColumns = @JoinColumn(name = "c_id"),
+//    inverseJoinColumns = @JoinColumn(name = "p_id"))
+//    private List<Product> productList; //10000000
 }
